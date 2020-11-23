@@ -1,0 +1,277 @@
+@font-face {
+    font-family: PlayfairDisplay-Medium;
+    src: url(../fonts/PlayfairDisplay-Medium.ttf);
+  }
+@font-face {
+    font-family: PlayfairDisplay-SemiBold;
+    src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
+  }
+@font-face {
+    font-family: PlayfairDisplay-ExtraBold;
+    src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
+  }
+@font-face {
+    font-family: PlayfairDisplay-ExtraBoldItalic;
+    src: url(../fonts/PlayfairDisplay-ExtraBoldItalic.ttf);
+  }
+@font-face {
+    font-family: Faune-Text_Italic;
+    src: url(../fonts/Faune-Text_Italic.ttf);
+  }
+@font-face {
+    font-family: Faune-Display_Bold_Italic;
+    src: url(../fonts/Faune-Display_Bold_Italic.ttf);
+  }
+  @font-face {
+    font-family: Lora-Medium;
+    src: url(../fonts/Lora-Medium.ttf);
+  }
+  @font-face {
+    font-family: Lora-Regular;
+    src: url(../fonts/Lora-Regular.ttf);
+  }
+  @font-face {
+    font-family: Lora-SemiBold;
+    src: url(../fonts/Lora-SemiBold.ttf);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+    font-size: calc(12.5px + 0.875vh);
+    overflow: hidden;
+
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 470px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 9%;
+    padding: 1rem calc(10px + 1rem);
+    display: flex;
+    flex-direction: column;
+    .language-btn-container {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        margin-bottom: .7rem;
+        .language-btn--inner {
+            display: flex;
+            align-items: center;
+
+            .language-btn-icon {
+                height: 1rem;
+                transform: translate(.21rem, .1rem);
+            }
+            p {
+                font-size: .7rem;
+                font-family: PlayfairDisplay-SemiBold;
+                >span {
+                    &:first-of-type{
+                        margin-right: 1px;
+                    }
+                    &:last-of-type{
+                        margin-left: 1px;
+                    }
+                }
+            }
+            .language-selected {
+                font-family: PlayfairDisplay-Medium;
+
+                font-weight: bolder;
+            }
+        }
+    }
+    .buttons-top {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: unset;
+        div {
+            margin-top: .5rem;
+            padding: 0.2rem 1rem;
+            margin-right: 7px;
+            border: 1px solid black;
+            border-radius: 70px/30px;
+            -webkit-background-clip: padding-box; 
+            -moz-background-clip:    padding; 
+            background-clip:         padding-box;
+            p {
+                font-size: .75rem;
+                font-family: PlayfairDisplay-SemiBold;
+
+            }
+            cursor: pointer;
+        }
+
+        .selected-btn {
+            background-color: rgb(0, 0, 254);
+            border-color: rgb(0, 0, 254);;
+            p {
+                font-family: PlayfairDisplay-ExtraBoldItalic;
+                color: #F2E737;
+            }
+            
+        }
+    }
+    .main-lawyer-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        .lawyer-left {
+            width: 50%;
+            padding-right: 3.5%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >img {
+                transform: translateY(0.0rem);
+                width: 100%;
+                filter: drop-shadow(5px 5px 4px #000);
+            }
+        }
+        .lawyer-right {
+            width: 50%;
+            padding-left: 3.5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .lawyer-name {
+                font-family: PlayfairDisplay-ExtraBold;
+                font-weight: bold;
+                font-size: 1.25rem;
+                margin-bottom: .25rem;
+            }
+            .attr-title {
+                font-family: Faune-Display_Bold_Italic;
+                font-size: 1.1rem;
+            }
+            .attr-description {
+                margin-top: .0rem;
+                font-family: Lora-SemiBold;
+                font-size: .75rem;
+            }
+            .lawyer-rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                
+                img {
+                    height: 1rem;
+                    transform: translate(.5rem, 0.15rem);
+                }
+            }
+            .lawyer-attr {
+                margin-top: .40rem;
+            }
+        }
+    }
+    .lawyer-main-under {
+        display: flex;
+        margin-top: .75rem;
+        >div {
+            width: 50%;
+            position: relative;
+            &:first-of-type {
+                >p {
+                    font-family: Lora-SemiBold;
+                    display: inline-block;
+                    position: absolute;
+                    left: 45%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: default;
+                    >span {
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .contact-btns {
+            padding-left: 3.5%;
+            >img {
+                height: 1.2rem;
+                margin-right: .5rem;
+                cursor: pointer;
+            }
+        }
+    }
+    .lawyer-info {
+        font-family: Lora-SemiBold;
+        font-size: .9rem;
+        position: relative;
+        .text {
+            margin-top: 2rem;
+            overflow: scroll;
+            border: 2px solid #555;
+            border-radius: 2rem/2rem;
+            height: 40vh;
+            padding-bottom: 5rem;
+            position: relative;
+            padding: .888rem;
+
+            p {
+                padding-bottom: 1rem;
+            }
+            .fade-out {
+                position: absolute;
+                will-change: transform;
+                height: 25%;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(to bottom, transparent 0% , white 90% );
+                user-select: none;
+                pointer-events: none;
+            }
+        }
+        .quote {
+            position: absolute;
+            top: 2px;
+            z-index: 1;
+            right: 25%;
+            height: 2.0rem;
+            width: 2.0rem;
+            background-color: white;
+            &::after {
+                display: inline-block;
+                content: '';
+                position: absolute;
+                width: 2px;
+                background-color:  #555;
+                height: 100%;
+                left: -2px;
+                bottom: 1px;
+            }
+            &::before {
+                display: inline-block;
+                content: '';
+                position: absolute;
+                width: 2.8284rem;
+                background-color:  #555;
+                height: 2px;
+                transform: rotate(45deg) translate(-50%, 0%);
+                left: .6rem;
+                bottom: -0px;
+            }
+        }
+        
+    }
+    ::-webkit-scrollbar {
+        display:none;
+        width: 0;
+    }
+} 

@@ -1,0 +1,361 @@
+@font-face {
+  font-family: PlayfairDisplay-Medium;
+  src: url(../fonts/PlayfairDisplay-Medium.ttf);
+}
+
+@font-face {
+  font-family: PlayfairDisplay-SemiBold;
+  src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: PlayfairDisplay-ExtraBold;
+  src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: PlayfairDisplay-ExtraBoldItalic;
+  src: url(../fonts/PlayfairDisplay-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Faune-Text_Italic;
+  src: url(../fonts/Faune-Text_Italic.ttf);
+}
+
+@font-face {
+  font-family: Faune-Display_Bold_Italic;
+  src: url(../fonts/Faune-Display_Bold_Italic.ttf);
+}
+
+@font-face {
+  font-family: Lora-Medium;
+  src: url(../fonts/Lora-Medium.ttf);
+}
+
+@font-face {
+  font-family: Lora-Regular;
+  src: url(../fonts/Lora-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lora-SemiBold;
+  src: url(../fonts/Lora-SemiBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ccc;
+  font-size: calc(12.5px + 0.875vh);
+  overflow: hidden;
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 470px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 9%;
+  padding: 1rem calc(10px + 1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .language-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 1rem;
+  margin-bottom: .7rem;
+}
+
+.container .language-btn-container .language-btn--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .language-btn-container .language-btn--inner .language-btn-icon {
+  height: 1rem;
+  -webkit-transform: translate(0.21rem, 0.1rem);
+          transform: translate(0.21rem, 0.1rem);
+}
+
+.container .language-btn-container .language-btn--inner p {
+  font-size: .7rem;
+  font-family: PlayfairDisplay-SemiBold;
+}
+
+.container .language-btn-container .language-btn--inner p > span:first-of-type {
+  margin-right: 1px;
+}
+
+.container .language-btn-container .language-btn--inner p > span:last-of-type {
+  margin-left: 1px;
+}
+
+.container .language-btn-container .language-btn--inner .language-selected {
+  font-family: PlayfairDisplay-Medium;
+  font-weight: bolder;
+}
+
+.container .buttons-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: unset;
+}
+
+.container .buttons-top div {
+  margin-top: .5rem;
+  padding: 0.2rem 1rem;
+  margin-right: 7px;
+  border: 1px solid black;
+  border-radius: 70px/30px;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
+.container .buttons-top div p {
+  font-size: .75rem;
+  font-family: PlayfairDisplay-SemiBold;
+}
+
+.container .buttons-top .selected-btn {
+  background-color: #0000fe;
+  border-color: #0000fe;
+}
+
+.container .buttons-top .selected-btn p {
+  font-family: PlayfairDisplay-ExtraBoldItalic;
+  color: #F2E737;
+}
+
+.container .main-lawyer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.container .main-lawyer-container .lawyer-left {
+  width: 50%;
+  padding-right: 3.5%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-lawyer-container .lawyer-left > img {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  width: 100%;
+  -webkit-filter: drop-shadow(5px 5px 4px #000);
+          filter: drop-shadow(5px 5px 4px #000);
+}
+
+.container .main-lawyer-container .lawyer-right {
+  width: 50%;
+  padding-left: 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .main-lawyer-container .lawyer-right .lawyer-name {
+  font-family: PlayfairDisplay-ExtraBold;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: .25rem;
+}
+
+.container .main-lawyer-container .lawyer-right .attr-title {
+  font-family: Faune-Display_Bold_Italic;
+  font-size: 1.1rem;
+}
+
+.container .main-lawyer-container .lawyer-right .attr-description {
+  margin-top: .0rem;
+  font-family: Lora-SemiBold;
+  font-size: .75rem;
+}
+
+.container .main-lawyer-container .lawyer-right .lawyer-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-lawyer-container .lawyer-right .lawyer-rating img {
+  height: 1rem;
+  -webkit-transform: translate(0.5rem, 0.15rem);
+          transform: translate(0.5rem, 0.15rem);
+}
+
+.container .main-lawyer-container .lawyer-right .lawyer-attr {
+  margin-top: .40rem;
+}
+
+.container .lawyer-main-under {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: .75rem;
+}
+
+.container .lawyer-main-under > div {
+  width: 50%;
+  position: relative;
+}
+
+.container .lawyer-main-under > div:first-of-type > p {
+  font-family: Lora-SemiBold;
+  display: inline-block;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: default;
+}
+
+.container .lawyer-main-under > div:first-of-type > p > span {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.container .lawyer-main-under .contact-btns {
+  padding-left: 3.5%;
+}
+
+.container .lawyer-main-under .contact-btns > img {
+  height: 1.2rem;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+
+.container .lawyer-info {
+  font-family: Lora-SemiBold;
+  font-size: .9rem;
+  position: relative;
+}
+
+.container .lawyer-info .text {
+  margin-top: 2rem;
+  overflow: scroll;
+  border: 2px solid #555;
+  border-radius: 2rem/2rem;
+  height: 40vh;
+  padding-bottom: 5rem;
+  position: relative;
+  padding: .888rem;
+}
+
+.container .lawyer-info .text p {
+  padding-bottom: 1rem;
+}
+
+.container .lawyer-info .text .fade-out {
+  position: absolute;
+  will-change: transform;
+  height: 25%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, white));
+  background: linear-gradient(to bottom, transparent 0%, white 90%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.container .lawyer-info .quote {
+  position: absolute;
+  top: 2px;
+  z-index: 1;
+  right: 25%;
+  height: 2.0rem;
+  width: 2.0rem;
+  background-color: white;
+}
+
+.container .lawyer-info .quote::after {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #555;
+  height: 100%;
+  left: -2px;
+  bottom: 1px;
+}
+
+.container .lawyer-info .quote::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 2.8284rem;
+  background-color: #555;
+  height: 2px;
+  -webkit-transform: rotate(45deg) translate(-50%, 0%);
+          transform: rotate(45deg) translate(-50%, 0%);
+  left: .6rem;
+  bottom: -0px;
+}
+
+.container ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+/*# sourceMappingURL=style.css.map */
